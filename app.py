@@ -1,5 +1,5 @@
 
-   # Cell 1: Setup
+  # Cell 1: Setup
 import streamlit as st
 from openai import OpenAI
 import os
@@ -7,6 +7,7 @@ import os
 # Get your OpenAI API key from environment variables 
 api_key = os.getenv("OPENAI_API_KEY")  # Used in production
 client = OpenAI(api_key=api_key)
+
 
 # Cell 2: Title & Description
 st.title('🤖 WordVomit')
@@ -55,3 +56,6 @@ if st.button('Generate Advice'):
     with st.spinner('Thinking...and thinking...'):
         post_text = analyze_text(user_input)
         st.write(post_text)
+
+    
+
